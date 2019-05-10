@@ -92,7 +92,10 @@ footer h2{
 }
 
 .articles {
-
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50vh auto;
+  grid-gap: 2rem;
 }
 
 .article {
