@@ -1,0 +1,17 @@
+{
+  "name": "instanews",
+  "version": "1.0.0",
+  "description": "RED Web Dev Instanews project",
+  "main": "behavior.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jennifer Vobis",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0"
+  }
+}
