@@ -1,8 +1,8 @@
 function defaultTask(cb) {
     'use strict';
 
-    var gulp = require('gulp');
-    var sass = require('gulp-sass');
+    const gulp = require('gulp');
+    const sass = require('gulp-sass');
 
     sass.compiler = require('node-sass');
 
@@ -12,8 +12,16 @@ function defaultTask(cb) {
             .pipe(gulp.dest('./css'));
     });
 
+    gulp.task('scssToCss', function () {
+        return gulp
+            .src("*.scss")
+            .pipe(sass())
+            .pipe(gulp.dest('./styles.css'))
+    });
+
     gulp.task('sass:watch', function () {
         gulp.watch('./sass/**/*.scss', ['sass']);
+        gulp.watch(".scss", gulp.series("scssToCss"));
     });
     cb();
 }
