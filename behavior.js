@@ -26,6 +26,13 @@ $(function () {
           let img = item.multimedia[4];
           $('.article-' + index).css('background-image', 'url("' + img.url + '")');
 
+          //change size of header when articles pop up
+          $(".header")
+            .addClass("sectionSelected")
+          $("img.logo")
+            .css("height", 100)
+            .css("margin-top", "1vh");
+
 
 
         });
